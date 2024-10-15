@@ -1,4 +1,4 @@
-# WhatsApp Message Automation Script
+# Mensagens automaticas pelo WhatsApp
 Este projeto é um script simples em Python que utiliza Selenium, PyAutoGUI e outras bibliotecas para automatizar o envio de mensagens pelo WhatsApp Web com base em horários pré-definidos.
 
 ## Funcionalidades:
