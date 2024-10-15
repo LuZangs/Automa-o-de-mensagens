@@ -1,0 +1,64 @@
+from selenium import webdriver
+import time
+import urllib
+from datetime import datetime
+import webbrowser
+import pyautogui
+# Função para verificar e executar ações com base na hora
+
+
+def verificar_horario():
+    while True:
+        # Obtém a hora atual no formato HH:MM
+
+        hora_atual = datetime.now().strftime("%H:%M")
+        # Exibe a hora atual no console (para fins de depuração)
+        print(f"Hora atual: {hora_atual}")
+
+        # abre o whatsapp com base na hora definida
+        if hora_atual == "14:05":
+            print("Abrindo o WhatsApp Web...")
+            telefone = "Numero de telefone"
+            mensagem = "Mensagem ou recado"
+            texto = urllib.parse.quote(mensagem)
+            link = f"https://web.whatsapp.com/send?phone={
+                telefone}&text={texto}"
+            webbrowser.open(link)
+            time.sleep(10)
+            pyautogui.press("Enter")
+            time.sleep(60)  # Aguarda 60 segundos antes de continuar
+
+        # Ação 2
+        elif hora_atual == "18:57":
+            print("Abrindo o WhatsApp Web...")
+            telefone = "Numero de telefone"
+            mensagem = "Não esquece o seu remédio"
+            texto = urllib.parse.quote(mensagem)
+            link = f"https://web.whatsapp.com/send?phone={
+                telefone}&text={texto}"
+            webbrowser.open(link)
+            time.sleep(10)
+            pyautogui.press("Enter")
+            time.sleep(60)
+
+        # Ação 3:
+        elif hora_atual == "18:57":
+            print("Abrindo o WhatsApp Web...")
+            telefone = "Numero de telefone"
+            mensagem = "Não esquece o seu remédio"
+            texto = urllib.parse.quote(mensagem)
+            link = f"https://web.whatsapp.com/send?phone={
+                telefone}&text={texto}"
+            webbrowser.open(link)
+            time.sleep(10)
+            pyautogui.press("Enter")
+            time.sleep(60)
+
+        else:
+            # Caso não seja nenhum dos horários específicos, espera 30 segundos e verifica novamente
+            time.sleep(30)
+
+
+# Executa a função de verificação
+verificar_horario()
+
